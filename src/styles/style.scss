@@ -1,0 +1,35 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 70dvh;
+
+  &__card {
+    background-color: #fafaed;
+    box-shadow: 0px 4px 12px 0px #e0dbbf99;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: 20rem;
+    height: 19.75rem;
+
+    &__img {
+    }
+
+    &__name {
+      font-weight: 900;
+      color: #1820ef;
+    }
+
+    &__description {
+    }
+
+    &__price {
+      font-weight: 900;
+      color: #ff4e42;
+    }
+  }
+}
