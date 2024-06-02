@@ -1,0 +1,43 @@
+.list {
+  display: flex;
+  gap: 4rem;
+  padding: 16px;
+
+  // se for mobile colocar 30rem e tirar scroll (acho que uns 1000px ta top ja)
+  //   max-width: 95dvw;
+  max-width: 30rem;
+
+  list-style: none;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.carousel-dots {
+  display: flex;
+
+  .carousel-dot {
+    transition: all 0.2s ease-in-out;
+
+    margin: 0 0.5rem;
+    width: 1rem;
+    height: 1rem;
+    background-color: #e0dbbf;
+
+    border-radius: 100%;
+    display: block;
+  }
+
+  .active {
+    background-color: #ff4e42;
+    border-radius: 8px;
+    transform: scale(1.1);
+    width: 2.5rem;
+  }
+}

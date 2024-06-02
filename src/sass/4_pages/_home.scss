@@ -1,0 +1,190 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  &__hero {
+    min-height: 70dvh;
+    width: 100%;
+
+    background: url("../assets/girlSkating.svg") no-repeat center,
+      url("../assets/redPattern.png") repeat;
+    padding: 2rem 0;
+    background-size: contain, contain;
+    background-origin: content-box;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__logo {
+      align-self: self-start;
+      color: #ffc024;
+      font-weight: 900;
+      margin-top: -0.5rem;
+      margin-left: 1.5rem;
+      width: 8rem;
+    }
+
+    &__main {
+      margin-top: 7rem;
+      margin-right: 40rem;
+
+      &__japanese-logo {
+        display: flex;
+        align-items: end;
+
+        &__ramen {
+          color: #ffc024;
+          font-weight: 900;
+          letter-spacing: 0.4rem;
+          writing-mode: vertical-rl;
+          text-orientation: upright;
+          font-size: 3rem;
+          margin: 0 0.5rem 0.7rem 0;
+        }
+
+        &__go {
+          margin: 0;
+          color: #ffffff;
+          font-weight: 900;
+          font-size: 10rem;
+          line-height: 8rem;
+        }
+      }
+
+      &__description {
+        margin-left: 0.8rem;
+        color: #ffffff;
+        width: 20ch;
+        line-height: 1.5rem;
+      }
+
+      &__button {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-left: 0.8rem;
+
+        width: 12.5rem;
+        padding: 0 1rem;
+        height: 3.5rem;
+
+        background-color: #1820ef;
+        border: none;
+        border-radius: 4rem;
+
+        color: #ffffff;
+        font-weight: 800;
+        cursor: pointer;
+
+        &:hover {
+          filter: brightness(102%);
+        }
+
+        &__arrow {
+          margin-bottom: -0.6rem;
+        }
+      }
+    }
+  }
+
+  &__order {
+    padding-top: 7rem;
+    margin-bottom: 4rem;
+
+    &__broth {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 2rem;
+      text-align: center;
+
+      &__title {
+        margin: 0 0.5rem;
+      }
+    }
+
+    &__meat {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+
+      &__title {
+        text-align: center;
+        margin: 0 0.5rem;
+      }
+    }
+  }
+
+  &__card {
+    background-color: #fafaed;
+    box-shadow: 0px 4px 12px 0px #e0dbbf99;
+    border-radius: 1rem;
+
+    flex-shrink: 0;
+    scroll-snap-align: center;
+
+    // Limitar pra isso quando for mobile
+    // width: 12rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    padding: 2.5rem;
+
+    &__img {
+      margin-top: 0.5rem;
+
+      width: 6.5rem;
+      height: 6.5rem;
+    }
+
+    &__name {
+      font-weight: 900;
+      font-size: 1.25rem;
+      color: #1820ef;
+
+      margin: 0.875rem 0 0.625rem;
+    }
+
+    &__description {
+      font-size: 0.875rem;
+      max-width: 90%;
+      text-align: center;
+      margin: 0;
+    }
+
+    &__price {
+      font-weight: 900;
+      font-size: 1.25rem;
+      margin: 0;
+      margin-top: 0.875rem;
+
+      color: #ff4e42;
+    }
+
+    &--active {
+      background-color: #1820ef;
+      color: #ffffff;
+
+      .container__card__name {
+        color: #ffffff;
+      }
+
+      .container__card__price {
+        color: #ffc024;
+      }
+    }
+
+    &:hover {
+      filter: brightness(102%);
+    }
+  }
+}
