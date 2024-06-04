@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="stylesheet" href="src/sass/app.scss" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@400;800;900&family=M+PLUS+Rounded+1c:wght@400;900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Ramen GO! - Order</title>
+  </head>
+  <body>
+    <main class="order">
+      <section class="order__first-section">
+        <img
+          class="order__first-section__logo"
+          src="./src/assets/logoRamenGoOrange.svg"
+          alt="Ramen go"
+        />
+
+        <div class="order__first-section__order-info">
+          <h2 class="order__first-section__order-info__your-order">
+            Your Order:
+          </h2>
+          <h1 class="order__first-section__order-info__order-name">
+            Salt and Yasai Vegetable Ramen
+          </h1>
+        </div>
+      </section>
+      <section class="order__second-section">
+        <img
+          src="./src/assets/bowing.svg"
+          class="order__second-section__image"
+          alt="bowing icone"
+        />
+        <p class="order__second-section__japanese-description">
+          どもありがとうございます。
+        </p>
+        <h1 class="order__second-section__being-prepared">
+          Your order is being prepared
+        </h1>
+        <p class="order__second-section__hold-on">
+          Hold on, when you least expect you will be eating your rámen.
+        </p>
+        <button type="button" class="order__second-section__button">
+          Place new order
+          <img
+            src="./src/assets/arrow.svg"
+            class="order__second-section__button__arrow"
+            alt="icone de seta para a direita"
+          />
+        </button>
+      </section>
+    </main>
+    <script type="module" src="src/scripts/order.js"></script>
+  </body>
+</html>
