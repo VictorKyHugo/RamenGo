@@ -1,0 +1,135 @@
+.order {
+  min-height: 100dvh;
+  display: flex;
+
+  &__first-section {
+    flex: 1;
+    background: url("../assets/bluePattern.png");
+    background-size: cover;
+
+    display: flex;
+    flex-direction: column;
+
+    &__logo {
+      align-self: self-start;
+      margin-top: 1.5rem;
+      margin-left: 1.5rem;
+      width: 8rem;
+    }
+
+    &__order-info {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      &__order-image {
+        width: 50%;
+      }
+
+      &__your-order {
+        color: $white;
+        font-size: 1.25rem;
+
+        margin-bottom: 0;
+      }
+      &__order-name {
+        color: $yellow-300;
+        width: 15ch;
+
+        text-align: center;
+        font-size: 2rem;
+
+        margin-bottom: 4rem;
+      }
+
+      @media (max-width: 1250px) {
+        &__order-image {
+          margin-top: 3rem;
+          width: 65%;
+        }
+      }
+    }
+  }
+
+  &__second-section {
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    &__japanese-description {
+      color: $yellow-300;
+      font-weight: 900;
+      font-size: 1.5rem;
+
+      margin: 1.5rem 0 0;
+    }
+
+    &__being-prepared {
+      color: $red-300;
+      text-align: center;
+    }
+
+    &__hold-on {
+      margin: 0.5rem 0 0;
+      text-align: center;
+    }
+
+    &__button {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      margin-top: 2rem;
+
+      width: 12.5rem;
+      padding: 0 1rem;
+      height: 3.5rem;
+
+      background-color: $blue-300;
+      border: none;
+      border-radius: 4rem;
+
+      color: $white;
+      font-weight: 800;
+      cursor: pointer;
+
+      &:hover {
+        filter: brightness(90%);
+      }
+
+      &__arrow {
+        margin-bottom: -0.2rem;
+      }
+    }
+  }
+
+  @media (max-width: 1000px) {
+    flex-direction: column;
+
+    &__first-section {
+      &__logo {
+        align-self: center;
+        margin-left: 0;
+      }
+
+      &__order-info {
+        &__order-image {
+          width: 21rem;
+        }
+      }
+    }
+
+    &__second-section {
+      &__image {
+        margin-top: 4rem;
+      }
+
+      &__button {
+        margin: 1.5rem 0 4rem;
+      }
+    }
+  }
+}

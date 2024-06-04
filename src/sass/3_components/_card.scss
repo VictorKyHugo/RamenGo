@@ -1,0 +1,84 @@
+.card {
+  background-color: $gray-100;
+  box-shadow: 0px 4px 12px 0px #e0dbbf99;
+  border-radius: 1rem;
+
+  flex-shrink: 0;
+  scroll-snap-align: center;
+
+  width: 14rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+
+  padding: 2.5rem;
+
+  &__image {
+    &--active {
+      display: none;
+    }
+
+    &--inactive {
+      display: block;
+    }
+  }
+
+  &__name {
+    font-weight: 900;
+    font-size: 1.25rem;
+    color: $blue-300;
+
+    margin: 0.875rem 0 0.625rem;
+  }
+
+  &__description {
+    font-size: 0.875rem;
+    max-width: 90%;
+    text-align: center;
+    margin: 0;
+  }
+
+  &__price {
+    font-weight: 900;
+    font-size: 1.25rem;
+    margin: 0;
+    margin-top: 0.875rem;
+
+    color: $red-300;
+  }
+
+  &--active {
+    background-color: $blue-300;
+    color: $white;
+
+    .card__image--inactive {
+      display: none;
+    }
+
+    .card__image--active {
+      display: block;
+    }
+
+    .card__name {
+      color: $white;
+    }
+
+    .card__price {
+      color: $yellow-300;
+    }
+  }
+
+  &:hover {
+    filter: brightness(90%);
+  }
+}
+
+@media (max-width: 1100px) {
+  .card {
+    width: 12rem;
+  }
+}

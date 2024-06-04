@@ -1,43 +1,72 @@
 .list {
   display: flex;
+  max-width: 95dvw;
+
   gap: 4rem;
   padding: 16px;
-
-  // se for mobile colocar 30rem e tirar scroll (acho que uns 1000px ta top ja)
-  //   max-width: 95dvw;
-  max-width: 30rem;
 
   list-style: none;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
+}
 
-  scrollbar-width: none;
-  -ms-overflow-style: none;
+@media (max-width: 1050px) {
+  .list {
+    max-width: 25rem;
 
-  &::-webkit-scrollbar {
-    display: none;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+  .carousel-dots {
+    display: flex;
+    margin-top: 2rem;
+
+    &__dot {
+      transition: all 0.2s ease-in-out;
+
+      margin: 0 0.5rem;
+      width: 1rem;
+      height: 1rem;
+      background-color: $gray-200;
+
+      border-radius: 100%;
+      display: block;
+
+      cursor: pointer;
+
+      &:hover {
+        filter: brightness(90%);
+      }
+    }
+
+    &--active {
+      background-color: $red-300;
+      border-radius: 8px;
+      transform: scale(1.1);
+      width: 2.5rem;
+    }
   }
 }
 
-.carousel-dots {
-  display: flex;
-
-  .carousel-dot {
-    transition: all 0.2s ease-in-out;
-
-    margin: 0 0.5rem;
-    width: 1rem;
-    height: 1rem;
-    background-color: #e0dbbf;
-
-    border-radius: 100%;
-    display: block;
+@media (max-width: 400px) {
+  .list {
+    max-width: 19rem;
+    gap: 1rem;
   }
 
-  .active {
-    background-color: #ff4e42;
-    border-radius: 8px;
-    transform: scale(1.1);
-    width: 2.5rem;
+  html {
+    -ms-overflow-style: none;
+
+    scrollbar-width: none;
+    max-width: 100vw !important;
+    overflow: hidden !important;
+    overflow-y: auto !important;
+  }
+  html ::-webkit-scrollbar {
+    display: none;
   }
 }
